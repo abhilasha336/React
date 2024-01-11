@@ -4,7 +4,7 @@ function createRender(createElement,rootContainer){
   /* const firstElement= document.createElement(createElement.type) //built in function
    firstElement.innerHTML=createElement.children
    firstElement.setAttribute('href',createElement.props.href)
-   firstElement.setAttribute('target',createElement.props.type)
+   firstElement.setAttribute('target',createElement.props.target)
    rootContainer.appendChild(firstElement)
    */
 
