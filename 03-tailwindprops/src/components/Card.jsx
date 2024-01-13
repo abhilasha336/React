@@ -33,8 +33,9 @@ function Card(  //this is a function
      post="Associate",
      srcValue="https://images.pexels.com/photos/196655/pexels-photo-196655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
      myArr  //destructure it
-    }) { //destructing by props using {}   here is the default value this will be taken ,if we not specify in app.jsx </card> properties
-    return (
+    }) {
+       //destructing by props using {}   here is the default value this will be taken ,if we not specify in app.jsx </card> properties
+       return (
       <div>
           <figure className="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
     <img className="w-24 h-24 rounded-full mx-auto" src={srcValue} alt="" width="384" height="512"/>
@@ -50,6 +51,7 @@ function Card(  //this is a function
         </div>
         <div>
           {post} {myArr}
+        
         </div>
       </figcaption>
     </div>
