@@ -6,7 +6,16 @@ function App() {
   const [isNumberAllowed, setNumberAllowed] = useState(false);
   const [isSymbolAllowed, setSymbolAllowed] = useState(false);
   const [length, setLength] = useState(8);
-  const passwordRef=useRef(null)
+  const passwordRef=useRef(null) 
+
+  const removeDiv = () => {
+    const specialElements = document.querySelectorAll('.insidespecial');
+    const lastSpecialElement = specialElements[0];
+  
+    if (lastSpecialElement) {
+      lastSpecialElement.remove();
+    }
+  };
 
   const generatePassword=useCallback(()=>{
     let pass=""
@@ -18,7 +27,7 @@ function App() {
       pass+=str.charAt(charIndex)
     }
     setPassword(pass)
-  },[length,isSymbolAllowed,isNumberAllowed])
+  },[length,isSymbolAllowed,isNumberAllowed]) //here we have to pass state variables which is not frequently changing
 
 
   useEffect(()=>{
@@ -33,10 +42,12 @@ function App() {
 
      const reactElement=document.createElement('div')
      reactElement.innerHTML=password
+     reactElement.classList="insidespecial"
      rootContainer.appendChild(reactElement)
   
   }
   const special=document.querySelector('.special')
+
   return (
     <>
       <div className='w-full max-w-xl mx-auto my-4 shadow-md rounded-lg px-4 py-3 text-orange-500 bg-gray-800'>
@@ -54,6 +65,8 @@ function App() {
            onClick={copyPassword}>Copy</button>
            <button className='outline-none py-1 rounded-lg px-5 bg-blue-600 text-white'
            onClick={()=>{createRender(special)}}>Add</button>
+           <button className='outline-none py-1 rounded-lg px-5 bg-blue-600 text-white'
+           onClick={removeDiv}>Remove</button>
         </div>
         <div className='flex text-sm items-center gap-x-2'>
           <div className='flex items-center gap-x-1'>
@@ -89,7 +102,10 @@ function App() {
           </div>
         </div>
       </div>
+      <div>
       <div  className='w-full max-w-xl mx-auto my-4 shadow-md rounded-lg px-4 py-3 text-orange-500 bg-gray-800 special by-white'></div>
+
+      </div>
     </>
   );
 }
