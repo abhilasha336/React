@@ -28,13 +28,13 @@ function App() {
     }
     setPassword(pass)
   },[length,isSymbolAllowed,isNumberAllowed]) //here we have to pass state variables which is not frequently changing
-
+//password is always changeing, so exluded
 
   useEffect(()=>{
     generatePassword()
   },[length,isNumberAllowed,isSymbolAllowed])
 
-  const copyPassword=()=>{
+  const copyPassword=()=>{   //copy to clipboard features
     window.navigator.clipboard.writeText(password)
     passwordRef.current?.select()
   }
