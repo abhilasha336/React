@@ -35,6 +35,9 @@ function App() {
         style= {{backgroundImage:`url(https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`}}
    >
     <div className='w-full'>
+    <div className='w-full  max-w-md mx-auto text-xl text-black text-center border-gray-60 
+                    rounded-lg p-5 backdrop-blur-sm bg-white/30 mb-2'>Welcome To Currency Convertor
+      </div>
       <div className='w-full max-w-md mx-auto border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30'>
         <form onSubmit={(e)=>{
                                e.preventDefault()
