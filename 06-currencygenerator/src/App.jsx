@@ -18,9 +18,10 @@ function App() {
   const options=Object.keys(currenctDataFromApiHooks)
 
   const swap=()=>{
-    const tempAmount=amount
-    setAmount(convertedAmount)
-    setConvertedAmount(tempAmount)
+    const tempAmount = amount;
+    const tempConvertedAmount = convertedAmount;
+    setAmount(tempConvertedAmount);
+    setConvertedAmount(tempAmount);
     setFrom(to)
     setTo(from)
   }
@@ -67,7 +68,7 @@ function App() {
                       currencyOptions={options}
                       amount={convertedAmount}
                       amountDisabled
-                      onAmountChange={(convertedAmount)=>setConvertedAmount(convertedAmount)}
+                      onAmountChange={(amount)=>setConvertedAmount(convertedAmount)}
 
                       onCurrencyChange={(currency)=>setTo(currency)}
                       selectedCurrency={to}
