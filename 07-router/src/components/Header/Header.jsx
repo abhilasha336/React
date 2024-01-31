@@ -93,6 +93,36 @@ import {Link,NavLink} from 'react-router-dom'
                               >
                               </NavLink>
                           </li>
+                          <li>
+                              <NavLink
+                                  to="user"
+                                  className={({isactive}) =>
+                                      `block py-2 pr-4 pl-3 duration-200 border-b text-white
+                                      border-gray-100
+                                      ${isactive?"text-orange-700":"text-white-700" }
+                                       hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
+                                        hover:text-orange-700 lg:p-0
+                                      `
+                                  }
+                              >
+                                  User
+                              </NavLink>
+                          </li>
+                          <li>
+                              <NavLink
+                                  to="hubdata"
+                                  className={({isactive}) =>
+                                      `block py-2 pr-4 pl-3 duration-200 border-b text-white
+                                      border-gray-100
+                                      ${isactive?"text-orange-700":"text-white-700" }
+                                       hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
+                                        hover:text-orange-700 lg:p-0
+                                      `
+                                  }
+                              >
+                                  Hub
+                              </NavLink>
+                          </li>
                           
                           
                       </ul>

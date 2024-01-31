@@ -8,6 +8,8 @@ import About from './components/About/About'
 import Start from './components/Start/Start'
 import Home from './components/Home/Home'
 import Contact from './components/Contact/Contact'
+import User from './components/User/User'
+import Hub,{HubInfoLoader} from './components/Hub/Hub'
 
 
 
@@ -19,10 +21,21 @@ import Contact from './components/Contact/Contact'
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-    <Route path='' element={<Start/>}/>  
-    <Route path='home' element={<Home/>}/>   
-    <Route path='about' element={<About/>}/>   
-    <Route path='contact' element={<Contact/>}/>   
+      <Route path='' element={<Start/>}/>  
+      <Route path='home' element={<Home/>}/>   
+      <Route path='about' element={<About/>}/>   
+      <Route path='contact' element={<Contact/>}/>  
+      <Route path='user/' element={<User/>}>
+        <Route path=':userid' element={<User/>}/>
+      </Route>
+      <Route  loader={HubInfoLoader}
+              path='hubdata' 
+              element={<Hub/>
+              }/>
+      <Route path='*' element={<div>Not Found</div>}/>
+
+
+ 
 
 
     
