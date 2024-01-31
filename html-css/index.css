@@ -1,0 +1,21 @@
+.main{
+ display :flex;
+ height: 10vh;
+ background-color: blueviolet;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ text-decoration: none;
+ list-style-type:  none; 
+ width: 100vw;
+ text-align: center;
+}
+.one{
+    flex:1;
+}
+.two{
+    flex:1;
+}
+.three{
+    flex:1;
+}
