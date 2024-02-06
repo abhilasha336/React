@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <div className="w-full max-h-svh ">
+    <div className=" ">
       <NavDashBoard/>
       <Calendar/>
       <Footer/>

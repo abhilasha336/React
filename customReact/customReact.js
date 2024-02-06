@@ -7,6 +7,7 @@ function createRender(createElement,rootContainer){
    firstElement.setAttribute('target',createElement.props.target)
    rootContainer.appendChild(firstElement)
    */
+  
 
    const reactElement=document.createElement(createElement.type)
    reactElement.innerHTML=createElement.children
