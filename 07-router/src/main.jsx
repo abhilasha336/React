@@ -10,6 +10,8 @@ import Home from './components/Home/Home'
 import Contact from './components/Contact/Contact'
 import User from './components/User/User'
 import Hub,{HubInfoLoader} from './components/Hub/Hub'
+import Google from './components/Google/Google'
+import './components/Google/css/googlehomepage.css'
 
 
 
@@ -21,7 +23,7 @@ import Hub,{HubInfoLoader} from './components/Hub/Hub'
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route path='' element={<Start/>}/>  
+      <Route path='' element={<Google/>}/>  
       <Route path='home' element={<Home/>}/>   
       <Route path='about' element={<About/>}/>   
       <Route path='contact' element={<Contact/>}/>  
