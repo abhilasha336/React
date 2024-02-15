@@ -1,10 +1,10 @@
 import React from 'react';
 import './header.css';
-import './js/IEupdate.js'; // Assuming this is the path to your IEupdate JavaScript file
-import './js/custom'; // Assuming this is the path to your custom JavaScript file
+import '../Middle/js/IEupdate.js'; // Assuming this is the path to your IEupdate JavaScript file
+import '../Middle/js/custom.js'; // Assuming this is the path to your custom JavaScript file
 import { useEffect,useState,useRef } from 'react';
 // import { updateBrowser } from './js/IEupdate.js';
-import { initializeCustom } from './js/custom';
+import { initializeCustom } from '../Middle/js/custom.js';
 
 
 
